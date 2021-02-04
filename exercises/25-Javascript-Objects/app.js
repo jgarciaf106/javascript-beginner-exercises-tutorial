@@ -28,11 +28,31 @@ function addAllFamilyLuckyNumbers(anArray){
   //To-Do: loop and add; consider nested loops
   //Hint: use the anArray variable to get all of the lucky numbers
   
+    for(const member in anArray){
+    const allLuckyNumbers = arr => arr.reduce((a,b) => a + b, 0);
+    sumOfAllLuckyNumbers = sumOfAllLuckyNumbers + allLuckyNumbers(anArray[member].lucky_numbers);    
+}
+  
   return sumOfAllLuckyNumbers;
 }
 
 //Enter all your code here:
 
+// update John Doe Fourth Lucky number
+person.lucky_numbers[3] = 33;
+
+//create a new person
+var person3 = {
+    name: "Jimmy",
+    lastname: "Doe",
+    age: 13,
+    gender: "male",
+    lucky_numbers: [1,2,3,4],
+    significant_other: null
+}
+
+//add the family memeber to the family object
+family.members.push(person3);
 
 //Do not make changes below:
 console.log(addAllFamilyLuckyNumbers(family.members)); 
